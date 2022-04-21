@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      let customElementsDefine = window.customElements.define;
+
+      // hack: capture all pages
+      window.PAGES = [];
+      window.customElements.define = function(name, classDef) {
+        // PAGES.push('acc-page-chart', 'acc-page-component', 'acc-page-help', 'acc-page-home', 'acc-page-pdf', 'acc-page-table')
+        if( name.match(/^acc-page-/) ) PAGES.push(name);
+        customElementsDefine.call(customElements, name, classDef);
+      };
+    </script>
+    <script type="module" src="./dist/bundle.js"></script>
+    <style>
+          html {
+      /* UCD-Colors. Not called directly in application */
+      --acc-color-blue : #022851;
+      --acc-color-blue70 : #355B85;
+      --acc-color-blue50 : #6884A3;
+      --acc-color-blue20 : #B3C1D1;
+      --acc-color-blue10 : #CDD6E0;
+      --acc-color-gold : #FFBF00;
+      --acc-color-black90 : #191919;
+      --acc-color-black60 : #666666;
+      --acc-color-black10 : #E5E5E5;
+      --acc-color-white : #FFFFFF;
+      --acc-color-rec-pool : #6FCFEB;
+      --acc-color-sunflower : #FFDC00;
+      --acc-color-farmers-market : #AADA91;
+      --acc-color-thiebaud-icing : #F095CD;
+      --acc-color-rose : #FF8189;
+      --acc-color-putah-creek : #008EAA;
+      --acc-color-double-decker : #C10230;
+
+      /* Theme colors called throughout application.  */
+      --acc-tcolor-primary : var(--acc-color-blue);
+      --acc-tcolor-primary70 : var(--acc-color-blue70);
+      --acc-tcolor-primary50 : var(--acc-color-blue50);
+      --acc-tcolor-primary20 : var(--acc-color-blue20);
+      --acc-tcolor-primary10 : var(--acc-color-blue10);
+      --acc-tcolor-primary-disabled : var(--acc-color-blue20);
+      --acc-tcolor-secondary : var(--acc-color-gold);
+      --acc-tcolor-light : var(--acc-color-white);
+      --acc-tcolor-danger : var(--acc-color-double-decker);
+      --acc-tcolor-text : var(--acc-color-black90);
+      --acc-tcolor-bg : var(--acc-color-black10);
+      --acc-tcolor-bg-primary : var(--acc-color-blue10);
+      --acc-tcolor-hero-film : linear-gradient(rgba(2, 40, 81, 0.8), rgba(2, 40, 81, 0.8));
+      --acc-tcolor-modal-film : rgba(179, 193, 209, 0.8);
+      --acc-tcolor-hover-bg : var(--acc-color-putah-creek);
+      --acc-tcolor-hover-text : var(--acc-color-white);
+      --acc-tcolor-link-text : var(--acc-color-blue70);
+      --acc-tcolor-link-disabled-text : var(--acc-color-black60);
+      --acc-tcolor-link-hover-text : var(--acc-color-putah-creek);
+      --acc-tcolor-block-bg : var(--acc-color-white);
+      --acc-tcolor-accent0 : var(--acc-color-rec-pool);
+      --acc-tcolor-accent1 : var(--acc-color-sunflower);
+      --acc-tcolor-accent2 : var(--acc-color-farmers-market);
+      --acc-tcolor-accent3 : var(--acc-color-thiebaud-icing);
+      --acc-tcolor-accent4 : var(--acc-color-rose);
+      --acc-tcolor-accent5 : var(--acc-color-blue20);
+      --acc-tcolor-code-text : var(--acc-color-blue );
+      --acc-tcolor-placeholder-text : var(--acc-color-black60);
+      --acc-tcolor-code-bg : var(--acc-color-black10 );
+      --acc-tcolor-border : var(--acc-color-blue20);
+
+      /* Theme font variables */
+      --acc-font-size : 16px;
+      --acc-font-size-h1 : 26px;
+      --acc-font-size-h2 : 22px;
+      --acc-font-size-h3 : 18px;
+      --acc-font-size-small : 14px;
+      --acc-font-weight : 400;
+      --acc-font-weight-bold : 700;
+
+      /* Misc. theme variables */
+      --acc-hr-color : var(--acc-color-blue20);
+      --acc-hr-color-light : var(--acc-color-blue10);
+      --acc-hr-weight : 1px;
+      --acc-masthead-height: 50px;
+      --acc-masthead-logo-height: 20px;
+    }
+    body, html {
+      font-family      : proxima-nova,"Lucida Grande","Lucida Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size        : var(--acc-font-size);
+      font-weight      : var(--acc-font-weight);
+      line-height      : 1.625;
+      margin           : 0;
+      padding          : 0;
+      background-color : var(--acc-tcolor-bg);
+      color            : var(--acc-tcolor-text);
+      max-width        : 100vw;
+      font-display     : swap;
+
+  }
+       @font-face {
+          font-family: "Font Awesome 5 Free";
+          font-style: normal;
+          font-weight: 900;
+          font-display: block;
+          src: url("/fonts/brand-icons/fa-solid-900.eot");
+          src: url("/fonts/brand-icons/fa-solid-900.eot?#iefix") format("embedded-opentype"), 
+               url("/fonts/brand-icons/fa-solid-900.woff2") format("woff2"), 
+               url("/fonts/brand-icons/fa-solid-900.woff") format("woff"), 
+               url("/fonts/brand-icons/fa-solid-900.ttf") format("truetype"), 
+               url("/fonts/brand-icons/fa-solid-900.svg#fontawesome") format("svg");
+        }
+        .fa,
+        .fas {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+        } 
+      @font-face {
+        font-family: Proxima-Nova;
+        src: 
+          url("/fonts/proximanova-regular-webfont.woff2") format("woff2"),
+          url("/fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"),
+          url("/fonts/proximanova-regular-webfont.woff") format("woff"),
+          url("/fonts/proximanova-regular-webfont.ttf") format("truetype"),
+          url("/fonts/proximanova-regular-webfont.svg#Proxima-Nova") format("svg");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap
+      }
+
+      @font-face {
+        font-family: Proxima-Nova;
+        src: 
+          url("/fonts/proximanova-bold-webfont.woff2") format("woff2"),
+          url("/fonts/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"),
+          url("/fonts/proximanova-bold-webfont.woff") format("woff"),
+          url("/fonts/proximanova-bold-webfont.ttf") format("truetype"),
+          url("/fonts/proximanova-bold-webfont.svg#Proxima-Nova") format("svg");
+        font-weight: 700;
+        font-style: normal;
+        font-display:swap
+      }
+
+      @font-face {
+        font-family: Proxima-Nova;
+        src: 
+          url("/fonts/proximanova-regularit-webfont.woff2") format("woff2"),
+          url("/fonts/proximanova-regularit-webfont.eot?#iefix") format("embedded-opentype"),
+          url("/fonts/proximanova-regularit-webfont.woff") format("woff"),
+          url("/fonts/proximanova-regularit-webfont.ttf") format("truetype"),
+          url("/fonts/proximanova-regularit-webfont.svg#Proxima-Nova") format("svg");
+        font-weight: 400;
+        font-style: italic;
+        font-display:swap}
+
+      @font-face {
+        font-family: Proxima-Nova;
+        src: 
+          url("/fonts/proximanova-boldit-webfont.woff2") format("woff2"),
+          url("/fonts/proximanova-boldit-webfont.eot?#iefix") format("embedded-opentype"),
+          url("/fonts/proximanova-boldit-webfont.woff") format("woff"),
+          url("/fonts/proximanova-boldit-webfont.ttf") format("truetype"),
+          url("/fonts/proximanova-boldit-webfont.svg#Proxima-Nova") format("svg");
+        font-weight: 700;
+        font-style: italic;
+        font-display:swap}
+
+      @font-face {
+        font-family: proxima-nova;
+        src: 
+          url("/fonts/proximanova-black-webfont.woff2") format("woff2"),
+          url("/fonts/proximanova-black-webfont.eot?#iefix") format("embedded-opentype"),
+          url("/fonts/proximanova/proximanova-black-webfont.woff") format("woff"),
+          url("/fonts/proximanova-black-webfont.ttf") format("truetype"),
+          url("/fonts/proximanova-black-webfont.svg#proxima-nova") format("svg");
+        font-weight: 900;
+        font-style: normal;
+        font-display:swap
+      }
+    </style>
+  </head>
+  <body>
+    <aggie-crop-calculator></aggie-crop-calculator>
+  </body>
+</html>
