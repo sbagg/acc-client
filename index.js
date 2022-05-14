@@ -1,7 +1,7 @@
 const express = require('express');
 const app = require('./routes/index.js');
 
-const PORT = 7000;
+const PORT = 3000;
 
 app.use(express.static('public'));
 

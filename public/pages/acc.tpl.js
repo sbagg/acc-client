@@ -353,15 +353,20 @@ export function render() {
   slogan="Aggie Crop Calculator"
   figure-src="../images/book-logo.png" 
   prevent-fixed
+  href="#home"
  >
 
   <ucd-theme-primary-nav>
-    <a href="#table">Table</a>
-    <a href="#chart">Charts</a>
-    <a href="#pdf">PDF</a>
+    <a href="#home">Home</a>
+    <ul link-text="Data Views">
+      <li><a href="#table">Table</a></li>
+      <li><a href="#chart">Charts</a></li>
+      <li><a href="#pdf">PDF</a></li>
+    </ul>
     <a href="#calculation">Calculation</a>
-    <a href="#help">Help</a>
+    <a href="#about">About</a>
   </ucd-theme-primary-nav>
+
 
   <ucd-theme-quick-links title="Profile Login" style-modifiers="highlight">
     <a href="#">Login</a>
@@ -370,7 +375,6 @@ export function render() {
 </ucd-theme-header>
 
   <ucdlib-pages id="pages" selected="${this.loading ? this.selectedPage : "loading"}" ></ucdlib-pages>
-
 
 <div id="app-footer" ?hidden="${this.page == 'app-mobile-menu'}">
   <div class="container">

@@ -47,20 +47,20 @@ export function render() {
         <ul class="list--arrow">
           <li>
             <strong>Chart View</strong>
-            <br>Including Pie charts, bar graphs, and more!
+            <br>Including line charts of kc factors. More Graphs to come!
           </li>
           <li>
             <strong>PDF View</strong>
-            <br>Creates an exportable pdf summary of data available in open postgres database
+            <br>Creates an exportable pdf summary of data available in open postgres database involving kc factors
           </li>
           <li>
             <strong>Table View</strong>
-            <br>Initial table view reading based on open postgres database that is customizable
+            <br>Initial table view reading based on open postgres database involving kc factors. Export for both CSV and Excel available
           </li>
           <li>
             <strong>Calculation</strong>
-            <br>A section build for running small calculation and exporting such files 
-            <br><strong>Coming Soon!</strong> Includes the ability to store calculations in local redis database for member use. 
+            <br>A section build for running small calculation 
+            <br><strong>Coming Soon!</strong> Includes the ability to use database factors store calculations in local redis database for member use. 
           </li>
         </ul>   
       </div>

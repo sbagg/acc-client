@@ -2,7 +2,6 @@ import { LitElement} from 'lit';
 import {render, styles} from "./pdf.tpl.js";
 import { jsPDF } from "jspdf";
 import 'jspdf-autotable'
-import { saveAs } from 'file-saver';
 
 
 class AccPDF extends LitElement {
@@ -12,8 +11,8 @@ class AccPDF extends LitElement {
           unit : {type: String},
           format : {type: Array}, 
           pdf_name : {type: String},
-          data : {type: Object},
-          title : {type: Array},
+          data : {type: Array},
+          title : {type: String},
           label : {type: Array},
           table_name: {type: String},
           type: {type: String}
@@ -24,7 +23,7 @@ class AccPDF extends LitElement {
 
   static get styles() {
     return styles();
-  }
+  } 
   constructor() {
     super();
     this.render = render.bind(this);
@@ -47,39 +46,28 @@ class AccPDF extends LitElement {
   firstUpdated(){
     this.pdf_frame = this.shadowRoot.querySelector("#pdfFrame");
     this.pdf = this.genPDF();
-    this.addEventListener("click", this.savePDF(this.pdf));
-
   }
 
-  savePDF(pdf){
+  savePDF(){
     if(this.pdf_name.includes(" ")){
       const search = ' ';
       const replaceWith = '-';
       this.pdf_name = this.pdf_name.split(search).join(replaceWith);
     }
-    pdf.output('pdfobjectnewwindow');
+    this.pdf.output('pdfobjectnewwindow');
     
   }
   genPDF(){
-    var doc = new jsPDF({ putOnlyUsedFonts: true,})
-
+    var doc = new jsPDF({ putOnlyUsedFonts: true,});
     doc.setProperties({
       title: this.pdf_name,
       subject: 'This is the subject',
-      author: 'UC Davis',
+      author: 'UC Davis', //user name
       keywords: 'generated, javascript, web 2.0, ajax',
       creator: 'Aggie Crop Calculator'
     });
 
     if(this.type == "text"){
-      // for (let lab of this.label[0]){
-      //   console.log(lab)
-      //   //doc.text(20, 20, lab);
-      //   //this.data.map(console.log());
-      //   this.data.forEach(function (entry) {
-      //     console.log(entry);
-      //   });
-      // }
       doc.text(20, 20, 'This is PDF text sample that is in development!');
     }
 

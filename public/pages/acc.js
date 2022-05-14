@@ -3,7 +3,7 @@ import {render} from "./acc.tpl.js";
 
 import "./acc-page-home"
 import "./acc-page-chart"
-import "./acc-page-help"
+import "./acc-page-about"
 import "./acc-page-pdf"
 import "./acc-page-calculation"
 import "./acc-page-table"
@@ -42,7 +42,6 @@ class AccApp extends AccUtilsDataCollection {
     this.elements = [];
 
     this.version = "alpha";
-    console.log(PAGES);
     window.addEventListener('hashchange', async e => {
       let page = window.location.hash.replace(/^#/, '');
       if( !PAGES.includes('acc-page-'+page) ) return;

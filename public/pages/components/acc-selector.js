@@ -3,6 +3,7 @@ import {render} from "./acc-selector.tpl.js";
 
 
 import {Mixin, MainDomElement} from '@ucd-lib/theme-elements/utils/mixins';
+import AccUtilsDataCollection from '../utils/acc-utils-data-collection'
 
 class AccSelector extends Mixin(LitElement)
     .with(MainDomElement) {
@@ -13,7 +14,6 @@ class AccSelector extends Mixin(LitElement)
     return {
         dbName : {type: Array},
         dbData : {type: Object},
-        dbResult : {type: Array}
     };
    }
   constructor() {
@@ -32,8 +32,7 @@ class AccSelector extends Mixin(LitElement)
                    'keyC': [{'3': 'A Objects', 'B': 'B Objects', 'C': 'C Objects'}, 
                             {'A': 'A Objects', 'B': 'B Objects', 'C': 'C Objects'}, 
                             {'A': 'A Objects', 'B': 'B Objects', 'C': 'C Objects'}]
-                  } 
-    this.dbResult;
+                  } ;
     
     
   }
@@ -43,14 +42,15 @@ class AccSelector extends Mixin(LitElement)
     let strUser = this.selectpicker.options[this.selectpicker.selectedIndex].text;
     let keys = Object.keys(this.dbData);
 
+    
     keys.map(key => {
         if(key == strUser){
-            this.dbResult = this.dbData[key];
+          AccUtilsDataCollection.dbResult = this.dbData[key];
         }
         
     });
+   console.log(AccUtilsDataCollection.dbResult);
 
-    console.log(this.dbResult);
   }
 
 }

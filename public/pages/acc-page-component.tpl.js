@@ -43,7 +43,7 @@ export function render() {
           <ul>
             <li><code>title</code>: The title of the PDF. Default is PDF</li>
           </ul> 
-          <acc-pdf></acc-pdf>
+          <acc-pdf data=${JSON.stringify(this.resultArray)} label=${JSON.stringify(this.labelArray)}></acc-pdf>
        </p>
       </section>
       <section>
@@ -52,7 +52,25 @@ export function render() {
           <ul>
             <li><code>title</code>: The title of the Chart. Default is Chart</li>
           </ul> 
-          <acc-chart></acc-chart>
+          <acc-chart object=${JSON.stringify(this.object)} kc_id=${JSON.stringify(this.kc_id)}></acc-chart>
+       </p>
+      </section>
+      <section>
+        <h2>Calculation View</h2>
+        <p>This uses many keywords to create a table view, including the following: 
+          <ul>
+            <li><code>title</code>: The title of the Table. Default is Table</li>
+          </ul> 
+          <acc-calculation function="sample" param="${JSON.stringify(this.sampleParamter)}"></acc-calculation>
+       </p>
+      </section>
+      <section>
+      <h2>Table View</h2>
+        <p>This uses many keywords to create a table view, including the following: 
+          <ul>
+            <li><code>title</code>: The title of the Table. Default is Table</li>
+          </ul> 
+          <acc-table></acc-table>
        </p>
       </section>
       <section>
@@ -87,7 +105,7 @@ export function render() {
           <ul>
             <li><code>title</code>: The title of the Chart. Default is Chart</li>
           </ul> 
-          <acc-selector><p slot="selectorTitle">Sample DB Selector</p></acc-selector>
+          <acc-selector @click=${this.clickSelector}><p slot="selectorTitle">Sample DB Selector</p></acc-selector>
        </p>
       </section>
     
