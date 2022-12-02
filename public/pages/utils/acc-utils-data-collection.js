@@ -1,5 +1,6 @@
 import { LitElement, html } from 'lit';
 import API from "../../../models/APIModel";
+import _ from 'lodash';
 
 
 
@@ -59,6 +60,8 @@ export default class AccUtilsDataCollection extends LitElement {
     this.etoFields = eto.fields;
     this.gridFields = grid.fields;
 
+    this.kcCombination = this.combine(this.kcRows, this.kcDateRows, "id");
+
     this.kcSelectorLabels = this.getSelectorLabels(this.kcRows);
     this.kcDatesSelectorLabels = this.getSelectorLabels(this.kcDateRows);
     this.etoSelectorLabels = this.getSelectorLabels(this.etoRows);
@@ -101,6 +104,21 @@ export default class AccUtilsDataCollection extends LitElement {
 
   }
 
+  combine(arr1, arr2, match) {
+    return _.union(
+      _.map(arr1, function (obj1) {
+        var same = _.find(arr2, function (obj2) {
+          return obj1[match] === obj2[match];
+        });
+        return same ? _.extend(obj1, same) : obj1;
+      }),
+      _.reject(arr2, function (obj2) {
+        return _.find(arr1, function(obj1) {
+          return obj2[match] === obj1[match];
+        });
+      })
+    );
+  }
 
   getSelectorLabels(db){
     /*

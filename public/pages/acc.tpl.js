@@ -363,7 +363,10 @@ export function render() {
       <li><a href="#chart">Charts</a></li>
       <li><a href="#pdf">PDF</a></li>
     </ul>
-    <a href="#calculation">Calculation</a>
+    <ul link-text="Calculator Views">
+      <li><a href="#calculation">User Calculations</a></li>
+      <li><a href="#database">Database Calculations</a></li>
+    </ul>
     <a href="#about">About</a>
   </ucd-theme-primary-nav>
 

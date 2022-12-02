@@ -1,4 +1,4 @@
-const GridModel = require("../models/GridModel");
+const GridModel = require("../models/GridModel.js");
 //controller takes the request, response and next object 
 
 module.exports = {

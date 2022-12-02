@@ -1,10 +1,10 @@
 const Pool = require('pg').Pool
 
 const pool = new Pool({
-  user: 'admin',
-  host: 'localhost',
-  database: 'acc',
-  password: 'myPassword',
+  user: 'postgres',
+  host: 'acc-database',
+  database: 'acc-db',
+  password: 'acc-docker-cloud-2022',
   port: 5432,
 })
 

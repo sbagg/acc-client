@@ -7,7 +7,6 @@
       // hack: capture all pages
       window.PAGES = [];
       window.customElements.define = function(name, classDef) {
-        // PAGES.push('acc-page-chart', 'acc-page-component', 'acc-page-help', 'acc-page-home', 'acc-page-pdf', 'acc-page-table')
         if( name.match(/^acc-page-/) ) PAGES.push(name);
         customElementsDefine.call(customElements, name, classDef);
       };

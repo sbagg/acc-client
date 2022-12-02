@@ -1,4 +1,4 @@
-const EtoModel = require("../models/EtoModel");
+const EtoModel = require("../models/EtoModel.js");
 //controller takes the request, response and next object 
 
 module.exports = {

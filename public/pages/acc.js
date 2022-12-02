@@ -10,6 +10,7 @@ import "./acc-page-table"
 import "./acc-page-component"
 import "./acc-page-error"
 import "./acc-page-loading"
+import "./acc-page-database"
 
 
 import '@ucd-lib/theme-elements/brand/ucd-theme-header/ucd-theme-header.js'

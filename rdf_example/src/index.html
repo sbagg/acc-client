@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<style>
+.button1 {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2 {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.textBox {
+  padding: 8px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+</style>
+
+
+
+<body>
+
+<form>
+  <input class="textBox" id="url" />
+  <input class="button1" id="insertURL" type="button" value="Insert into array" />
+</form>
+
+<p>URLs:</p>
+<p id="textbox"></p>
+
+<!-- <input class="button1" id="runHTTP" onclick="httpfetchJSON(urlList)" type="button" value="Insert into array" /> -->
+<input id="storeUrl" type="button" value="Store the URLs" />
+
+<p id="demo"></p>
+<!-- <script type="text/javascript" src="./rdf-store-project/ld-local-store.js"></script> -->
+<script type="module" src="./dist/bundle.js"></script>
+
+<!-- <script type="module">
+    let urlList = [];
+    const url = document.querySelector('#url');
+    const button = document.querySelector('#insertURL');
+    const paragraph = document.querySelector('#textbox');
+    const storeUrl = document.querySelector('#storeUrl');
+
+
+    function updateButton() {
+        urlList.push(url.value);
+        paragraph.textContent = urlList.join('\n')	
+    }
+
+    function collectJson(type="print_store") {
+        let file = "rdf-store-project/files/" + type + ".json"; 
+        let text;
+        //httpfetchJSON(urlList,  {print=true, frame=true}); 
+        fetch(file)
+                .then(response => type == "print_store" ? response.text(): response.json())
+                .then(textResp => {
+                    if(type == "print_store"){
+                        textLine = textResp.split("\\n");
+                        text = "<table border='1'>"
+                        text += "<tr><th>Subject</th><th>Predicate</th><th>Object</th><th>Graph</th></tr>"
+                        for (x of textLine) {
+                            triples = x.split("|");
+                            let subject = triples[0];
+                            let predicate = triples[1];
+                            let object = triples[2];
+                            let graph = triples[3];
+                            text += "<tr><td>" + subject + "</td><td>" + predicate + "</td><td>" + object + "</td><td>" + graph + "</td></tr>";
+                        }
+                        text += "</table>";  
+                        document.getElementById("demo").innerHTML = text;
+
+                    } else {
+                        myObj = JSON.parse(textResp);
+
+                    }
+                })
+    }
+
+</script> -->
+</body>
+</html>

@@ -1,4 +1,4 @@
-const CalcModel = require("../models/CalculationModel");
+const CalcModel = require("../models/CalculationModel.js");
 //controller takes the request, response and next object 
 
 module.exports = {

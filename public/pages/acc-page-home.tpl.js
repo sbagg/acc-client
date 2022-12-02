@@ -31,7 +31,7 @@ export function render() {
     
     </style>
     <div class="l-full-width">
-      <h1 class="page-title u-space-mb--large">Welcome to<span style="color:var(--acc-color-farmers-market)"> &nbsp;Aggie Crop Calculator</span>!</h1>
+      <h1 class="page-title u-space-mb--large">Welcome to Beta <span style="color:var(--acc-color-farmers-market)"> &nbsp;Aggie Crop Calculator</span>!</h1>
     </div>
 
     <div class="content-box">

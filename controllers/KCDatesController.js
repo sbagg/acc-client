@@ -1,4 +1,5 @@
-const KcDateModel = require("../models/KcDatesModel");
+const KcDateModel = require("../models/KCDatesModel.js");
+
 //controller takes the request, response and next object 
 
 module.exports = {

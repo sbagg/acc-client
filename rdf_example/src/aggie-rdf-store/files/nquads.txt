@@ -1,0 +1,77 @@
+ _:df_1_2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://fedora.info/definitions/v4/repository#Resource>  .
+ _:df_1_2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/ldp#Resource>  .
+ _:df_1_2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CreativeWork>  .
+ _:df_1_2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://fedora.info/definitions/v4/repository#Binary>  .
+ _:df_1_2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/ldp#NonRDFSource>  .
+ _:df_1_2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ImageObject>  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://fedora.info/definitions/v4/repository#created> "2022-10-12T00:46:02.242859Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://fedora.info/definitions/v4/repository#createdBy> "fedoraAdmin"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://fedora.info/definitions/v4/repository#lastModified> "2022-10-12T00:46:02.658380Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://fedora.info/definitions/v4/repository#lastModifiedBy> "fedoraAdmin"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://schema.org/license> "http://rightsstatements.org/vocab/InC-NC/1.0/"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://schema.org/name> "Ashley"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://schema.org/name> "BAD CAT NAME"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://fedora.info/definitions/v4/repository#hasFixityService> <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg/fcr:fixity>  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://schema.org/about> "http://id.worldcat.org/fast/849374"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://schema.org/about> "http://en.wikipedia.org/wiki/Cat"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://schema.org/alternativeHeadline> "Why do I need a cat door when I have you to open it for me?"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://schema.org/creator> "Quinn Hart"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://schema.org/datePublished> "2015"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://schema.org/filename> "ashley.jpg"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasMimeType> "image/jpeg"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://schema.org/owner> "Quinn Hart"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#filename> ""  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://www.loc.gov/premis/rdf/v1#hasMessageDigest> <urn:sha-512:45f56ba90f71ada321e7249c545927bf672a5c57cc4574195c2782dc533d099280356b76a7bc9b9cb5547dd47885f964d58beff3993d01b7eb000fb80e9f73c3>  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://www.loc.gov/premis/rdf/v1#hasSize> "1180139"^^<http://www.w3.org/2001/XMLSchema#long>  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> <http://schema.org/hasMimeType> "image/jpeg"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://fedora.info/definitions/v4/repository#created> "2022-10-12T00:46:00.178595Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://fedora.info/definitions/v4/repository#createdBy> "fedoraAdmin"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://fedora.info/definitions/v4/repository#lastModified> "2022-10-12T00:46:00.701988Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://fedora.info/definitions/v4/repository#lastModifiedBy> "fedoraAdmin"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://schema.org/license> "http://rightsstatements.org/vocab/InC-NC/1.0/"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://schema.org/name> "Ashley"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://fedora.info/definitions/v4/repository#hasFixityService> <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg/fcr:fixity>  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://schema.org/about> "http://id.worldcat.org/fast/849374"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://schema.org/about> "http://en.wikipedia.org/wiki/Cat"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://schema.org/alternativeHeadline> "Why do I need a cat door when I have you to open it for me?"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://schema.org/creator> "Quinn Hart"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://schema.org/datePublished> "2015"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://schema.org/filename> "ashley.jpg"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasMimeType> "image/jpeg"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://schema.org/owner> "Quinn Hart"  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#filename> ""  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://www.loc.gov/premis/rdf/v1#hasMessageDigest> <urn:sha-512:45f56ba90f71ada321e7249c545927bf672a5c57cc4574195c2782dc533d099280356b76a7bc9b9cb5547dd47885f964d58beff3993d01b7eb000fb80e9f73c3>  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources/internal.jpg> <http://www.loc.gov/premis/rdf/v1#hasSize> "1180139"^^<http://www.w3.org/2001/XMLSchema#long>  .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://fedora.info/definitions/v4/repository#Resource> _:df_1_2 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/ldp#Resource> _:df_1_2 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/ldp#Container> _:df_1_2 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://fedora.info/definitions/v4/repository#Container> _:df_1_2 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/ldp#BasicContainer> _:df_1_2 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/ldp#RDFSource> _:df_1_2 .
+ _:df_1_1 <http://fedora.info/definitions/v4/repository#created> "2022-10-12T00:45:59.175898Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> _:df_1_2 .
+ _:df_1_1 <http://fedora.info/definitions/v4/repository#createdBy> "fedoraAdmin" _:df_1_2 .
+ _:df_1_1 <http://fedora.info/definitions/v4/repository#lastModified> "2022-10-12T00:45:59.175898Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> _:df_1_2 .
+ _:df_1_1 <http://fedora.info/definitions/v4/repository#lastModifiedBy> "fedoraAdmin" _:df_1_2 .
+ _:df_1_1 <http://schema.org/hasPart> <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> _:df_1_2 .
+ _:df_1_1 <http://schema.org/hasPart> <http://localhost:8666/fcrepo/rest/faq/internal.jpg> _:df_1_2 .
+ _:df_1_1 <http://schema.org/license> "http://rightsstatements.org/vocab/InC-NC/1.0/" _:df_1_2 .
+ _:df_1_1 <http://schema.org/name> "External Resources" _:df_1_2 .
+ <http://rightsstatements.org/vocab/InC-NC/1.0/> <http://schema.org/name> "IN COPYRIGHT - NON-COMMERCIAL USE PERMITTED" _:df_1_2 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://fedora.info/definitions/v4/repository#created> "2022-10-12T00:45:59.175898Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> _:df_1_7 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://fedora.info/definitions/v4/repository#createdBy> "fedoraAdmin" _:df_1_7 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://fedora.info/definitions/v4/repository#lastModified> "2022-10-12T00:45:59.175898Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> _:df_1_7 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://fedora.info/definitions/v4/repository#lastModifiedBy> "fedoraAdmin" _:df_1_7 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://schema.org/hasPart> <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> _:df_1_7 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://schema.org/hasPart> <http://localhost:8666/fcrepo/rest/faq/internal.jpg> _:df_1_7 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://schema.org/license> "http://rightsstatements.org/vocab/InC-NC/1.0/" _:df_1_7 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://schema.org/name> "External Resources" _:df_1_7 .
+ <http://rightsstatements.org/vocab/InC-NC/1.0/> <http://schema.org/name> "IN COPYRIGHT - NON-COMMERCIAL USE PERMITTED" _:df_1_7 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://fedora.info/definitions/v4/repository#created> "2022-10-12T00:45:59.175898Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> _:df_1_12 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://fedora.info/definitions/v4/repository#createdBy> "fedoraAdmin" _:df_1_12 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://fedora.info/definitions/v4/repository#lastModified> "2022-10-12T00:45:59.175898Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> _:df_1_12 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://fedora.info/definitions/v4/repository#lastModifiedBy> "fedoraAdmin" _:df_1_12 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://schema.org/hasPart> <http://localhost:8666/fcrepo/rest/faq/external_resources/external.jpg> _:df_1_12 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://schema.org/hasPart> <http://localhost:8666/fcrepo/rest/faq/internal.jpg> _:df_1_12 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://schema.org/license> "http://rightsstatements.org/vocab/InC-NC/1.0/" _:df_1_12 .
+ <http://localhost:8666/fcrepo/rest/faq/external_resources> <http://schema.org/name> "External Resources" _:df_1_12 .
+ <http://rightsstatements.org/vocab/InC-NC/1.0/> <http://schema.org/name> "IN COPYRIGHT - NON-COMMERCIAL USE PERMITTED" _:df_1_12 .

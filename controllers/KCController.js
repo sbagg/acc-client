@@ -1,4 +1,4 @@
-const KcModel = require("../models/KcModel");
+const KcModel = require("../models/KCModel.js");
 //controller takes the request, response and next object 
 
 module.exports = {
